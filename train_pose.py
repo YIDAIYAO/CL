@@ -40,10 +40,10 @@ batch_size=256
 temperature=0.07
     
 # imagedataset=imageDataset(alllabels,data,W,newW)
-neuraldataset=neuralDataset(alllabels,data,W,newW)
+posedataset=poseDataset(alllabels,data,W,newW)
 
 loader = DataLoader(
-    neuraldataset,
+    posedataset,
     batch_size=batch_size
 )
 criterion = SupConLoss(device=device)
